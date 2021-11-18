@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-main {
+main,
+.mobile-container {
   height: 100vh;
   background-color: #111111;
   color: #ffffff;
@@ -13,7 +14,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* gap: 35px; */
 }
 
 .title {
@@ -113,5 +113,25 @@ footer a {
   footer a:hover {
     transition: 300ms;
     color: #886ce4;
+  }
+}
+
+.mobile-container {
+  display: none;
+}
+
+.mobile-container h1 {
+  font-size: 16px;
+  padding: 25px;
+  text-align: center;
+}
+
+@media screen and (max-width: 625px) {
+  main {
+    display: none;
+  }
+
+  .mobile-container {
+    display: flex;
   }
 }
